@@ -32,5 +32,13 @@ int main(void){
 
 	print(array);
 
+	stack *lst = new stack(10);
+
+	for (int i = 1; i < lst->getSize(); ++i)
+	{
+		 lst->push(i*10);
+	}
+
+	lst->print();
 
 }
