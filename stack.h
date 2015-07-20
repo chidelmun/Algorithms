@@ -14,8 +14,10 @@ class stack{
 
 
 	public:
-		stack();
-		stack(int size);
+		stack(int size){
+			top = 0;
+			elements =  elements[size];
+		}
 		stack(int size, T elmt);
 		void pop();
 		void puch(T item);
