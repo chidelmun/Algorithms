@@ -1,50 +1,36 @@
+/*Test Program for our array Implementation of the Stack
+The program creates a stack of integers, pushes values 
+into it and then empties the stack by an iterative popping call.
+
+@File 	: main.cc
+@Author : Delveri Munang
+@Date   : 21/07/2015
+@Project: Data Structures and Algorithms
+		  University of Buea, Cameroon.
+*/
+
+
 #include <iostream>
+#include "include/api.h"
 #include "stack.h"
-
-#define STACK_SIZE 4
-using namespace std;
-
-int top = 0;
-int push(int *stack, int value){
-	if(top == STACK_SIZE){
-		cout << "Stack is Full\n";
-		return -1;
-	}
-	stack[top] = value;
-	top++;
-	return top;
-}
-void pop(int *stack){
-	cout << "Stack top is :" << top << endl;
-	stack[top] = 0;
-	top--;
-}
-
-void print(int *stack){
-	cout <<"Printing stack......\n";
-	for(int i=0;i<STACK_SIZE;i++){
-		cout << stack[i] << endl; 
-	}
-}
-
-bool isEmpty(int *stack){
-	return top==0;
-}
 
 int main(void){
 
 	cout << "Stack Testing\n";
 	int array[STACK_SIZE];
-	push(array,10);
-	push(array,20);
-	push(array,30);
-	push(array,40);
-	push(array,50);
-	print(array);
-	pop(array);
+	
+
+	for(int i=top;i<STACK_SIZE;i++){
+		push(array,i*10);
+	}
+
 	print(array);
 
+	for(int i=0;i<STACK_SIZE;i++){
+		pop(array);
+	}
 
+	print(array);
 
 
 }
