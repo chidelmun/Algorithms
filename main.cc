@@ -45,6 +45,11 @@ int main(void){
 	lst->pop();
 	lst->pop();
 	cout << endl << "printing New Stack..." << endl;
+	*lst>>5;
+	*lst>>50;
+	*lst>>500;
+	*lst>>5000;
 	lst->print();
+
 
 }

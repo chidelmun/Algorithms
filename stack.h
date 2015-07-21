@@ -27,6 +27,9 @@ class stack{
 		bool isEmpty();
 		void print();
 		int getSize();
+		inline int operator>>(int x){
+			push(x);
+		}
 
 };
 
