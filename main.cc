@@ -17,7 +17,7 @@ into it and then empties the stack by an iterative popping call.
 int main(void){
 
 	cout << "Stack Testing\n";
-	int array[STACK_SIZE];
+	/*int array[STACK_SIZE];
 	
 
 	for(int i=top;i<STACK_SIZE;i++){
@@ -30,7 +30,7 @@ int main(void){
 		pop(array);
 	}
 
-	print(array);
+	print(array);*/
 
 	stack *lst = new stack(10);
 
@@ -38,7 +38,13 @@ int main(void){
 	{
 		 lst->push(i*10);
 	}
-
+	cout << "Printing Stack....." << endl;
+	lst->print();
+	lst->pop();
+	lst->pop();
+	lst->pop();
+	lst->pop();
+	cout << endl << "printing New Stack..." << endl;
 	lst->print();
 
 }

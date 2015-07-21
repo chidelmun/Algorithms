@@ -37,3 +37,5 @@ bool isEmpty(int *stack){
 	return top==0;
 }
 
+
+

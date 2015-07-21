@@ -4,7 +4,7 @@ Feel free to use this code and modify it to meet your needs
 @Author: Delveri Munang
 @Date  : 19/07/2015
 */
-
+#include <stdlib.h>
 
 class stack{
 	private:
@@ -17,10 +17,8 @@ class stack{
 		stack(int x){
 			size = x;
 			top = 0;
-			for (int i = 0; i < size; ++i)
-			{
-				elements[i] = 0;
-			}
+			cout << "Array of Size " << size << " Created..." << endl;
+			elements = new int[size];
 		}
 		stack(int size, int elmt);
 		void pop();
