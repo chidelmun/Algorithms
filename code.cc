@@ -4,12 +4,15 @@ using namespace std;
 
 int main(void){
 	queue *lst = new queue(10,10);
-	cout << lst->peek() << endl;
-	for (int i = 0; i < 15; ++i)
+	for (int i = 0; i < lst->getSize(); ++i)
 	{
 		lst->enqueue(i*10);
 	}
+	lst->print();
 
+	lst->dequeue();
+	lst->dequeue();
+	cout << "\nPrinting New Queue" << endl;
 	lst->print();
 	return 0;
 }

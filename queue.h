@@ -13,7 +13,7 @@ using namespace std;
 
 class queue{
 private:
-	int top,tail,size;
+	int head,tail,size;
 	int *elements;
 public:
 	queue(int size, int value);
@@ -21,15 +21,21 @@ public:
 	void dequeue();
 	int peek();
 	void print();
+	int getSize();
 
 };
 
-queue::queue(int size,int value){
-	size = size;
+int queue::getSize(){
+	return size;
+}
+
+queue::queue(int y,int value){
+	size = y;
 	elements = new int[size];
-	top = 0;
+	head = 0;
 	tail =0;
-	elements[top] = value;
+	elements[head] = value;
+	head++;
 }
 
 int queue::enqueue(int x){
@@ -38,12 +44,13 @@ int queue::enqueue(int x){
 		cout << "Queue is Full..." << endl;
 		return 0;
 	}*/
-	elements[++top] = x;
-	return top;
+	elements[head] = x;
+	head++;
+	return head;
 }
 
 int queue::peek(){
-	return elements[top];
+	return elements[tail];
 }
 
 void queue::dequeue(){
@@ -52,8 +59,9 @@ void queue::dequeue(){
 }
 
 void queue::print(){
-	for (int i = 0; i < size; ++i)
+	cout << "Printing Queue" << endl;
+	for (int i = 1; i < size; ++i)
 	{
-		cout << elements[i];
+		cout << "Element :" << elements[i] << endl;
 	}
 }
