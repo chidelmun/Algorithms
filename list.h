@@ -21,7 +21,20 @@ public:
 	list();
 	list(int data);
 	void insert(int value);
-	
+	void delete();
 
 
 };
+
+list::list(){
+	
+}
+list::list(int data){
+
+}
+void list::insert(int value){
+
+}
+void list::delete(){
+
+}
