@@ -16,9 +16,12 @@ struct node{
 
 class list{
 private:
-	node datum;
+	node firstNode;
 public:
 	list();
+	list(int data);
+	void insert(int value);
 	
+
 
 };
