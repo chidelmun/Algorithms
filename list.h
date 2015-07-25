@@ -42,6 +42,10 @@ list::list(int data){
 }
 void list::insert(int value){
 	NODE tmp = firstNode;
+	if (tmp.next)
+	{
+		/* code */
+	}
 
 }
 void list::remove(){
@@ -55,4 +59,5 @@ void list::print(){
 		n = n->next;
 	}
 }
+
 
