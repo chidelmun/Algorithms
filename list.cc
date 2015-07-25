@@ -1,23 +1,21 @@
-#include "llist.h"
 #include <iostream>
+#include "llist.h"
 using namespace std;
 
-int main(void){
+int main() {
 
-	NODE head = create(10);
+    LinkedList list;
 
-	for (int i = 2; i < 5; ++i)
-	{
-		insert(&head,i*10);
-	}
+    list.addValue(5);
+    list.addValue(10);
+    list.addValue(20);
 
-	print(&head);
-
-	cout << head.data << endl;
-
-	NODE nxt = *head.next;
-	cout << nxt.data << endl;
-
-	return 0;
-	
+    cout << list.popValue() << endl;
+    cout << list.popValue() << endl;
+    cout << list.popValue() << endl;
+    // because there is no error checking in popValue(), the following
+    // is undefined behavior. Probably the program will crash, because
+    // there are no more values in the list.
+    // cout << list.popValue() << endl;
+    return 0;
 }
