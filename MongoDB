@@ -23,3 +23,9 @@ TERMS:
 
 			db.createCollection('Collection_name',options<optional>)
 
+To show the tables or Collections available in the various databases,
+we use the show command in either case.
+
+	SHOW TABLES; For MariaDB
+
+	show collections : for MongoDB
