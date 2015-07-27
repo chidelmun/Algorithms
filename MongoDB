@@ -39,6 +39,14 @@ With our tables and Collections Setup, we can start populating them with data.
 
 		db.collection_name.insert(json_object);
 
+To retrieve data from our tables and collections we use SELECT statements in MariaDB and find() function in MongoDB.
+
+	SELECT * FROM table_name; Selects all fields from a table;
+
+	db.collection_name.find(options<optional>) Retrieves all fields from a collection.
+
+
+
 
 
 
