@@ -25,6 +25,7 @@ public:
 	btree(int value);
 	void insertNode(int value);
 	int  searchNode(int value);
+	void print();
 	~btree();
 private:
 
@@ -79,4 +80,37 @@ int btree::searchNode(int value){
 	}
 
 	return n;
+}
+
+void btree::print(){
+	cout << root->data << endl;
+	root = root->left;
+	print();
+}
+
+/*Alternative Implementation of Btree*/
+
+struct Node{
+	int data;
+	Node *left;
+	Node *right;
+};
+
+Node *createTree(int value){
+	Node *newNode = new Node;
+	newNode->data = value;
+	newNode->left = NULL;
+	newNode->right = NULL;
+	return newNode;
+}
+
+void printTree(Node *root){
+	if(root = NULL){
+		cout << "Tree is Empty:" << endl;
+	}
+	else{
+		cout << root->data << endl;
+		printTree(root->left);
+		printTree(root->right);
+	}
 }
