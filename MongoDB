@@ -29,3 +29,16 @@ we use the show command in either case.
 	SHOW TABLES; For MariaDB
 
 	show collections : for MongoDB
+
+With our tables and Collections Setup, we can start populating them with data.
+	In MariaDB we use the insert query to populate a table as follows:
+
+		INSERT INTO table_name VALUES(data...,);
+
+	In MongoDB we use the internal insert function on the collection object as follows:
+
+		db.collection_name.insert(json_object);
+
+
+
+
