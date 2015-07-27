@@ -1,1 +1,25 @@
 This file contains code snippets for Learning MongoDB
+
+MongoDB is a NoSQL Database bases on files. It is Written in C++ and
+runs on all major platforms.
+In this Series I will Make a compariam between Relational Databases and 
+NoSQL Databases as well as the different terms used.
+
+TERMS:
+	Database: This is used both is RDBMS and NoSQL Databases
+
+	Tables -> Collections:
+		Tables are used to hold the data in RDBMS while collections are used
+		in MongoDB
+
+		To create a table we use SQL(Structured query Language)  as 
+		follows:
+
+			CREATE TABLE table_name(options);
+			where table_name is name of table and options include
+			the table schema: column types and constraints.
+		To create a collection in MongoDB we use the createCollection()
+		function provided as follows:
+
+			db.createCollection('Collection_name',options<optional>)
+
