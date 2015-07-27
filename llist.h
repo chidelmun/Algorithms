@@ -41,3 +41,38 @@ public:
 private:
     Node *head; // this is the private member variable. It is just a pointer to the first Node
 };
+
+
+template <class T> class llist
+{
+    struct node
+    {
+      T data;
+      node *next;  
+    };
+public:
+    llist(){
+        head = NULL;
+    }
+
+    void addValue(T value){
+        node *newNode = new node();
+        newNode->data = T;
+        newNode->next = head;
+        head = newNode;
+    }
+
+    T popValue(){
+        node *newNode = head;
+        T ret = newNode->data;
+        head = head->next;
+        delete newNode;
+        return ret;
+    }
+
+    ~llist();
+
+private:
+    node *head;
+    
+};
