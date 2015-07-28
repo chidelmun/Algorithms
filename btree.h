@@ -89,28 +89,50 @@ void btree::print(){
 }
 
 /*Alternative Implementation of Btree*/
-
-struct Node{
+struct node{
 	int data;
-	Node *left;
-	Node *right;
+	node *left;
+	node *right;
 };
 
-Node *createTree(int value){
-	Node *newNode = new Node;
-	newNode->data = value;
-	newNode->left = NULL;
-	newNode->right = NULL;
-	return newNode;
+typedef struct node NODE;
+
+class Btree{
+public:
+	Btree();
+	Btree(int value);
+	void insert();
+	void search(int value);
+	void print();
+	~Btree();
+
+private:
+	NODE *root;
+
+};
+
+Btree::Btree(){
+	root = new NODE;
+	root->data = 10;
+	root->left = NULL;
+	root->right = NULL;
+}
+Btree::Btree(int value){
+	root = new NODE;
+	root->data = value;
+	root->left = NULL;
+	root->right = NULL;
 }
 
-void printTree(Node *root){
-	if(root = NULL){
-		cout << "Tree is Empty:" << endl;
+Btree::~Btree(){
+	delete root;
+}
+//Dummy
+void Btree::print(){
+	if(root==NULL){
+		cout << "Empty tree..." << endl;
 	}
 	else{
 		cout << root->data << endl;
-		printTree(root->left);
-		printTree(root->right);
 	}
 }

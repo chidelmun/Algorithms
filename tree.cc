@@ -23,10 +23,12 @@ The tree generated will have the following internal structure
 using namespace std;
 
 int main(void){
-	Node *tree = createTree(10);
+	
+	cout << "Creating tree..." << endl;
 
-	printTree(tree);
+	Btree *tree = new Btree();
 
+	tree->print();
 
 
 }
