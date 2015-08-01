@@ -28,7 +28,7 @@ int main(void){
 
 	Btree *tree = new Btree();
 
-	tree->print();
+	tree->printRight();
 
 
 }

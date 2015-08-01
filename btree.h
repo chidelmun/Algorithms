@@ -104,6 +104,8 @@ public:
 	void insert();
 	void search(int value);
 	void print();
+	void printLeft();
+	void printRight();
 	~Btree();
 
 private:
@@ -136,3 +138,28 @@ void Btree::print(){
 		cout << root->data << endl;
 	}
 }
+
+void Btree::printLeft(){
+	NODE *tmp = root;
+	while(tmp != NULL){
+		cout << tmp->data << endl;
+		tmp = tmp->left;
+
+	}
+}
+
+void Btree::printRight(){
+	NODE *tmp = root;
+	while(tmp != NULL){
+		cout << "Value is :" << tmp->data << endl;
+		tmp = tmp->right;
+	}
+}
+
+void preorderPrint(){
+	NODE *tmp = root;
+	cout << tmp->data << endl;
+}
+
+
+/*Classic Implementation of BST in C++*/
