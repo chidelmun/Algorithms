@@ -24,11 +24,25 @@ using namespace std;
 
 int main(void){
 	
-	cout << "Creating tree..." << endl;
+	Node* root = NULL;
 
-	Btree *tree = new Btree();
+	root = insert(root,20);
+	root = insert(root,15);
+	root = insert(root,10);
+	root = insert(root,30);
+	root = insert(root,45);
+	root = insert(root,5);
+	root = insert(root,7);
 
-	tree->printRight();
+	int item;
+	cout << "Enter element to be searched..." << endl;
+	cin >> item;
+	if(search(root,item)==true){
+		cout << "FOUND ITEM" << endl;
+	}
+	else 
+		cout << "NOT FOUND" << endl;
 
+	return 0;
 
 }

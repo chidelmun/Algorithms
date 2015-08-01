@@ -194,17 +194,11 @@ Node* insert(Node *root, int value){
 
 bool search(Node* root, int value){
 	if (root==NULL) // Tree is Empty
-	{
 		return false;
-	}
-	if (root->data == value) //Search value is root element
-	{
+	else if (root->data == value) //Search value is root element
 		return true;
-	}
 	else if (root->data <= value) // Search item is in left tree
-	{
 		return search(root->left, value);
-	}
 	else return search(root->right, value); //search item is in right tree
 
 }
