@@ -172,7 +172,17 @@ struct Node{
 };
 
 //Takes a BST root node and and inserts a value into the tree
-void insert(Node *root, int value){
+Node* insert(Node *root, int value){
+	if(root==NULL){  //Tree is empty
+		root = createNode(value);
+		return root;
+	}
+	else if(value <= root->data){ //visit left child recursively
+		root->left = insert(root->left, value);
+	}else{
+		root->right = insert(root->right, value); //visit right node recursively
+	}
+	return root;
 
 }
 //Allocate memory for new tree node and return a node
