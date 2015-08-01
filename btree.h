@@ -156,10 +156,6 @@ void Btree::printRight(){
 	}
 }
 
-void preorderPrint(){
-	NODE *tmp = root;
-	cout << tmp->data << endl;
-}
 
 
 /*Classic Implementation of BST in C++*/
@@ -170,6 +166,14 @@ struct Node{
 	Node *left;
 	Node *right;
 };
+
+//Allocate memory for new tree node and return a node
+Node *createNode(int value){
+	Node *newNode = new Node();
+	newNode->data = value;
+	newNode->left = newNode->right = NULL;
+	return newNode;
+}
 
 //Takes a BST root node and and inserts a value into the tree
 Node* insert(Node *root, int value){
@@ -185,10 +189,22 @@ Node* insert(Node *root, int value){
 	return root;
 
 }
-//Allocate memory for new tree node and return a node
-Node *createNode(int value){
-	Node *newNode = new Node();
-	newNode->data = value;
-	newNode->left = newNode->right = NULL;
-	return newNode;
+
+/*Takes a BST root node and searches to see if tree contains value*/
+
+bool search(Node* root, int value){
+	if (root==NULL) // Tree is Empty
+	{
+		return false;
+	}
+	if (root->data == value) //Search value is root element
+	{
+		return true;
+	}
+	else if (root->data <= value) // Search item is in left tree
+	{
+		return search(root->left, value);
+	}
+	else return search(root->right, value); //search item is in right tree
+
 }
