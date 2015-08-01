@@ -163,3 +163,19 @@ void preorderPrint(){
 
 
 /*Classic Implementation of BST in C++*/
+
+
+struct Node{
+	int data;
+	Node *left;
+	Node *right;
+};
+
+//Takes a BST root node and and inserts a value into the tree
+void insert(Node *root, int value){
+
+}
+//Allocate memory for new tree node and return a node
+Node *createNode(int value){
+
+}
