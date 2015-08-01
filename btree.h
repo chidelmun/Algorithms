@@ -177,5 +177,8 @@ void insert(Node *root, int value){
 }
 //Allocate memory for new tree node and return a node
 Node *createNode(int value){
-
+	Node *newNode = new Node();
+	newNode->data = value;
+	newNode->left = newNode->right = NULL;
+	return newNode;
 }
