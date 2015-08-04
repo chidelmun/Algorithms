@@ -45,7 +45,9 @@ To retrieve data from our tables and collections we use SELECT statements in Mar
 
 	db.collection_name.find(options<optional>) Retrieves all fields from a collection.
 
-
+To retrieve specific columns is MongoDb we specify them as rules in the query as follows:
+		
+		db.collection_name.find({field_name},{$rule : 100})
 
 
 
