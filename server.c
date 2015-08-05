@@ -44,6 +44,7 @@ int main(int argc, char *argv[])
      if (newsockfd < 0) 
           error("ERROR on accept");
      bzero(buffer,256);
+     while(1){
      n = read(newsockfd,buffer,255);
      if (n < 0) error("ERROR reading from socket");
      printf("Here is the message: %s\n",buffer);
@@ -51,5 +52,6 @@ int main(int argc, char *argv[])
      if (n < 0) error("ERROR writing to socket");
      close(newsockfd);
      close(sockfd);
+ }
      return 0; 
 }

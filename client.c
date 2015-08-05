@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
     serv_addr.sin_port = htons(portno);
     if (connect(sockfd,(struct sockaddr *) &serv_addr,sizeof(serv_addr)) < 0) 
         error("ERROR connecting");
+    while(1){
     printf("Please enter the message: ");
     bzero(buffer,256);
     fgets(buffer,255,stdin);
@@ -53,5 +54,6 @@ int main(int argc, char *argv[])
          error("ERROR reading from socket");
     printf("%s\n",buffer);
     close(sockfd);
+}
     return 0;
 }
