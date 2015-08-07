@@ -37,8 +37,8 @@ int main(void)
   curl = curl_easy_init();
   if(curl) {
     /* Set username and password */ 
-    curl_easy_setopt(curl, CURLOPT_USERNAME, "user");
-    curl_easy_setopt(curl, CURLOPT_PASSWORD, "secret");
+    curl_easy_setopt(curl, CURLOPT_USERNAME, "arleneflavie@gmail.com");
+    curl_easy_setopt(curl, CURLOPT_PASSWORD, "arlene1995");
  
     /* This will retrieve message 1 from the user's mailbox. Note the use of
      * pop3s:// rather than pop3:// to request a SSL based connection. */ 
