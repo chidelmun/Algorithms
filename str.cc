@@ -13,11 +13,10 @@ int  main(int argc, char const *argv[])
 		 << endl;
 	/* code */
 
+   cout << "Exception" << endl;
 	try{
-		if (atoi(argv[1]) < 0)
-		{
-			throw -1;
-		}
+			throw strExcept();
+		
 	}catch(strExcept ex){
 		ex.what();
 	}

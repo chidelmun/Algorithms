@@ -39,12 +39,12 @@ string str::operator<<(char ch){
 
 class strExcept : public exception{
 public:
-	void what();
+	string what();
 
 };
 
-void strExcept::what(){
-	cout << "String Exception cought\n check Usage of class" << endl;
+string strExcept::what(){
+	return "String Exception cought check Usage of class";
 }
 
 
