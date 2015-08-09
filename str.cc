@@ -12,5 +12,14 @@ int  main(int argc, char const *argv[])
 		 << "Printing .." << user[-5] \
 		 << endl;
 	/* code */
+
+	try{
+		if (atoi(argv[1]) < 0)
+		{
+			throw -1;
+		}
+	}catch(strExcept ex){
+		ex.what();
+	}
 	return 0;
 }

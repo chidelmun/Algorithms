@@ -2,8 +2,8 @@
 #include <string>
 using namespace std;
 
-#ifndef STR
-#define STR
+#ifndef _STR_
+#define _STR_
 	
 	class str : public string
 	{
@@ -32,4 +32,22 @@ char str::operator[](int key){
 	else
 		return this->at(key);
 }
+
+string str::operator<<(char ch){
+	
+}
+
+class strExcept : public exception{
+public:
+	void what();
+
+};
+
+void strExcept::what(){
+	cout << "String Exception cought\n check Usage of class" << endl;
+}
+
+
 #endif
+
+
