@@ -11,8 +11,12 @@ template <class T> class BSTREE
 	}NODE;
 
 public:
+	void insertNode(T val);
 	BSTREE();
 	~BSTREE();
+private:
+	node* createNode(T val);
+	void insertNodePriv(node* ref, T val);
 
 private:
 	NODE *root;
