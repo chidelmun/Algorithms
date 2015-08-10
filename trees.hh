@@ -1,7 +1,23 @@
 /*Binary search tree Interface*/
-#ifndef _BTREE_
-#define _BTREE_
+#ifndef _BSTREE_
+#define _BSTREE_
+template <class T> class BSTREE
+{
+	typedef struct node
+	{
+		T data;
+		node* left;
+		node* right;
+	}NODE;
 
+public:
+	BSTREE();
+	~BSTREE();
+
+private:
+	NODE *root;
+	
+};
 
 
 #endif
