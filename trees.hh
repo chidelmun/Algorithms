@@ -1,58 +1,59 @@
 /*Binary search tree Interface*/
+#include <iostream>
 #ifndef _BSTREE_
 #define _BSTREE_
 
 typedef struct node
-	{
-	T data;
+{
+	int data;
 	node* left;
 	node* right;
 }NODE;
 
-template <class T> class BSTREE
+class BSTREE
 {
 
 public:
-	void insertNode(T val);
+	void insertNode(int val);
 	BSTREE();
 	~BSTREE();
 private:
-	node* createNode(T val);
-	node* insertNodePriv(node* ref, T val);
+	node* createNode(int val);
+	node* insertNodePriv(node* ref, int val);
 
 private:
 	NODE *root;
 	
 };
 
-node* BSTREE::createNode(T val){
+node* BSTREE::createNode(int val){
 	node* newNode = new node;
-	newNode->data = T;
+	newNode->data = val;
 	newNode->left = NULL;
 	newNode->right= NULL;
 	return newNode;
 }
 
-node* BSTREE::insertNodePriv(node* ref, T val){
+node* BSTREE::insertNodePriv(node* ref, int val){
 	/*If tree is empty create root node*/
 	if (ref == NULL)
 	{
 		return createNode(val);
 	}
 	else{
-		if (T <= ref->value)
+		if (val <= ref->data)
 		{
 			insertNodePriv(ref->left, val);
 		}
 		else{
-			insertNodePriv(ref->right, val);
+			insertNodePriv(ref->right, val); 
 		}
 	}
 
 }
 
-void BSTREE::insertNode(T val){
-	insertNodePriv(val);
+void BSTREE::insertNode(int val){
+	insertNodePriv(root, val);
 }
 
 
