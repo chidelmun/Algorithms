@@ -15,7 +15,7 @@ class BSTREE
 
 public:
 	void insertNode(int val);
-	BSTREE();
+	BSTREE(int val);
 	~BSTREE();
 private:
 	node* createNode(int val);
@@ -54,6 +54,10 @@ node* BSTREE::insertNodePriv(node* ref, int val){
 
 void BSTREE::insertNode(int val){
 	insertNodePriv(root, val);
+}
+
+BSTREE::BSTREE(int val){
+	root->data = val;
 }
 
 #endif
