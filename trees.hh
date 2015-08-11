@@ -56,7 +56,6 @@ void BSTREE::insertNode(int val){
 	insertNodePriv(root, val);
 }
 
-
 #endif
 /*Red Black Tree Interface*/
 #ifndef _RBTREE_
