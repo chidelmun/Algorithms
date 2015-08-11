@@ -1,5 +1,6 @@
 /*Binary search tree Interface*/
 #include <iostream>
+using namespace std;
 #ifndef _BSTREE_
 #define _BSTREE_
 
@@ -15,13 +16,14 @@ class BSTREE
 
 public:
 	void insertNode(int val);
+	void printTree(node* ref);
 	BSTREE(int val);
 	~BSTREE();
 private:
 	node* createNode(int val);
 	node* insertNodePriv(node* ref, int val);
 
-private:
+public:
 	NODE *root;
 	
 };
@@ -57,7 +59,17 @@ void BSTREE::insertNode(int val){
 }
 
 BSTREE::BSTREE(int val){
-	root->data = val;
+	root = createNode(val);
+	
+}
+
+void BSTREE::printTree(node* ref){
+	if (ref != NULL)
+	{
+		cout << ref->data << endl;
+		printTree(ref->left);
+		printTree(ref->right);
+	}
 }
 
 #endif
