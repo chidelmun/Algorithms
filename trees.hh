@@ -17,6 +17,7 @@ class BSTREE
 public:
 	void insertNode(int val);
 	void printTree(node* ref);
+	bool lookUp(node *ref, int target);
 	BSTREE(int val);
 	~BSTREE();
 private:
@@ -71,6 +72,14 @@ void BSTREE::printTree(node* ref){
 		printTree(ref->left);
 		printTree(ref->right);
 	}
+}
+
+bool BSTREE::lookUp(node *ref, int target){
+	if(ref == NULL) return false;
+	else if(ref->data == target) return true;
+	else if(ref->data < target) lookUp(ref->left);
+	else lookUp(ref->right);
+
 }
 
 #endif
