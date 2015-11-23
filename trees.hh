@@ -63,6 +63,7 @@ BSTREE::BSTREE(int val){
 	
 }
 
+//PreOrder printing
 void BSTREE::printTree(node* ref){
 	if (ref != NULL)
 	{
