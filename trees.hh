@@ -82,6 +82,29 @@ bool BSTREE::lookUp(node *ref, int target){
 
 }
 
+
+// Helper Functions
+
+struct node * createNode(int data){
+	struct newNode = new node;
+	newNode->data = data;
+	newNode->left = NULL;
+	newNode->right = NULL;
+	return newNode;	
+}
+
+
+struct node* insert(struct node *ref, int data){
+	if(ref == NULL) return createNode(data);
+	else{
+		if(data < ref->data)
+			ref->left = insert(node->left,data);
+		else
+			 ref->right = insert(node->right, data);
+	return ref;	
+	}
+}
+
 #endif
 /*Red Black Tree Interface*/
 #ifndef _RBTREE_
