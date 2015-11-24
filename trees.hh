@@ -141,6 +141,19 @@ int max_depth(struct node* ref){
 	}
 }
 
+/*Return minimum value in Bnary search tree.
+Since tree is already sorted, no need to search all nodes
+*/
+
+int min_value(struct node* ref){
+	struct node* current = ref;
+	while(current != NULL){  // Visit left sub tree
+		current = current->left;
+	}
+	return current->data;
+
+}
+
 #endif
 /*Red Black Tree Interface*/
 #ifndef _RBTREE_
