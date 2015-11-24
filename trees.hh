@@ -120,6 +120,15 @@ struct node* build123(){
 	return root;
 }
 
+//compute number of nodes in tree.
+
+int size(struct node* ref){
+	if(ref == NULL) //Empty Tree
+		return 0;
+	else
+		return size(ref->left) + 1 + size(ref->right);
+}
+
 #endif
 /*Red Black Tree Interface*/
 #ifndef _RBTREE_
