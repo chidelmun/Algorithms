@@ -129,6 +129,18 @@ int size(struct node* ref){
 		return size(ref->left) + 1 + size(ref->right);
 }
 
+// Find maximum depth of tree.
+
+int max_depth(struct node* ref){
+	if(ref == NULL)
+		return 0;
+	else{
+		int left_depth = max_depth(ref->left);
+		int right_depth = max_depth(ref->right);
+		return left_depth > right_depth ? left_depth + 1 : right_depth + 1;
+	}
+}
+
 #endif
 /*Red Black Tree Interface*/
 #ifndef _RBTREE_
