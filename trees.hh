@@ -112,6 +112,14 @@ struct node* build123(){
 	return root;
 }
 
+struct node* build123(){
+	node* root = NULL;
+	root = insert(root,2);
+	root = insert(root ,1);
+	root = insert(root,3);
+	return root;
+}
+
 #endif
 /*Red Black Tree Interface*/
 #ifndef _RBTREE_
