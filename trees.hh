@@ -105,6 +105,13 @@ struct node* insert(struct node *ref, int data){
 	}
 }
 
+struct node* build123(){
+	node* root = createNode(2);
+	node->left = createNode(1);
+	node->right = createNode(3);
+	return root;
+}
+
 #endif
 /*Red Black Tree Interface*/
 #ifndef _RBTREE_
