@@ -154,6 +154,13 @@ int min_value(struct node* ref){
 
 }
 
+void print_tree(struct node* ref){
+	if(ref == NULL) return;
+	print_tree(ref->left);
+	cout << ref->data << endl;
+	print_tree(ref->right);
+}
+
 #endif
 /*Red Black Tree Interface*/
 #ifndef _RBTREE_
