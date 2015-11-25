@@ -161,6 +161,13 @@ void print_tree(struct node* ref){
 	print_tree(ref->right);
 }
 
+void post_order_print_tree(struct node* root){
+	if(root == NULL) return;
+	post_order_print_tree(root->left);
+	post_order_print_tree(root->right);
+	cout << root->data << endl;
+}
+
 #endif
 /*Red Black Tree Interface*/
 #ifndef _RBTREE_
