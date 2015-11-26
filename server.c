@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
      struct sockaddr_in serv_addr, cli_addr;
      int n;
      if (argc < 2) {
-         fprintf(stderr,"ERROR, no port provided\n");
+         fprintf(stderr,"ERROR, no port provided\nUsage: <address> <port>");
          exit(1);
      }
      sockfd = socket(AF_INET, SOCK_STREAM, 0);
