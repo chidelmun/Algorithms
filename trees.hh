@@ -240,6 +240,18 @@ void double_tree(struct node* node){
 	}
 }
 
+int same_tree(struct node* tree_one, struct node* tree_two){
+	if(tree_one == NULL and tree_two == NULL){
+		return (true);
+	}
+	else{
+		if(tree_one != NULL and tree_two != NULL){
+			return ((tree_one->data == tree_two->data) and (same_tree(tree_one->left,tree_two->left)
+				and (same_tree(tree_one->right, tree_two->right)));
+		}
+	}
+}
+
 #endif
 /*Red Black Tree Interface*/
 #ifndef _RBTREE_
