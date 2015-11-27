@@ -227,6 +227,18 @@ void mirror(struct node* node){
 		node->right = tmp;
 	}
 }
+void double_tree(struct node* node){
+	if(node == NULL){
+		return;
+	}else{
+		struct node* old_left;
+		double_tree(node->left);
+		double_tree(node->right);
+		old_left = node->left;
+		node->left = createNode(node->data);
+		node->left->left = old_left;
+	}
+}
 
 #endif
 /*Red Black Tree Interface*/
