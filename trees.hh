@@ -215,6 +215,19 @@ void printArray(int ints[], int len) {
   printf("\n"); 
 } 
 
+void mirror(struct node* node){
+	if(node == NULL){
+		return;
+	}else{
+		struct node* tmp;
+		mirror(node->left);
+		mirror(node->right);
+		tmp = node->left;
+		node->left = node->right;
+		node->right = tmp;
+	}
+}
+
 #endif
 /*Red Black Tree Interface*/
 #ifndef _RBTREE_
