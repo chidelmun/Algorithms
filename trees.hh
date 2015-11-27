@@ -168,6 +168,16 @@ void post_order_print_tree(struct node* root){
 	cout << root->data << endl;
 }
 
+int has_path_sum(struct node* root, int sum){
+	if(node == NULL){
+		return (sum==0);
+	}
+	else{
+		int sub_sum = sum - root->data;
+		return(has_path_sum(root->left, sub_sum) || has_path_sum(root->right,sub_sum));
+	}
+}
+
 #endif
 /*Red Black Tree Interface*/
 #ifndef _RBTREE_
