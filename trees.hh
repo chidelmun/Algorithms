@@ -305,6 +305,17 @@ int isBSTUtil(struct node* node, int min, int max) {
 #ifndef _RBTREE_
 #define _RBTREE_
 
+// Useful Variables and structures.
+
+enum colors{red,black};
+
+template <class T> struct node{
+	T data;
+	template <class T> struct node* left;
+	template <class T> struct node* right;
+	enum color{red, black};
+};
+
 
 #endif
 /*AVL Tree Interface*/
