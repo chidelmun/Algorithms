@@ -316,6 +316,15 @@ template <class T> struct node{
 	enum color{red, black};
 };
 
+// Supplementary interface
+
+struct rbt_node{
+	int data;
+	struct rbt_node* left;
+	struct rbt_node* right;
+	enum color{red,black};
+};
+
 
 #endif
 /*AVL Tree Interface*/
