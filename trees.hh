@@ -325,6 +325,11 @@ struct rbt_node{
 	enum color{red,black};
 };
 
+typedef struct rbt_node RBT_NODE;
+
+RBT_NODE* create_RBTNode(int val);
+ 
+
 
 #endif
 /*AVL Tree Interface*/
