@@ -17,20 +17,7 @@ into it and then empties the stack by an iterative popping call.
 int main(void){
 
 	cout << "Stack Testing\n";
-	/*int array[STACK_SIZE];
 	
-
-	for(int i=top;i<STACK_SIZE;i++){
-		push(array,i*10);
-	}
-
-	print(array);
-
-	for(int i=0;i<STACK_SIZE;i++){
-		pop(array);
-	}
-
-	print(array);*/
 
 	stack *lst = new stack(10);
 
